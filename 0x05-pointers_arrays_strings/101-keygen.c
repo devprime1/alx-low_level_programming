@@ -2,14 +2,22 @@
 #include <time.h>
 #include <stdlib.h>
 
-void crack(int len)
+/**
+ * main - generates random passwords for 101-crackme
+ * Return: zero
+ */
+int main(void)
 {
+	int sum;
+	char c;
+
 	srand(time(NULL));
-	int result;
-	char list[] = "1234567890qwertyuiopasdfghjklzxcvbnm!@#$%^&*()_- +=QWERTYUIOPASDFGHJKLZXCVBNM[]{};':\"<>,.?/\|";
-	for (int i =0; i <= len; i++)
+	while (sum <= 2645)
 	{
-		result = list[rand() % (sizeof list -1)];
+		c = rand() % 128;
+		sum += c;
+		putchar(c);
 	}
-return (result);
+	putchar(2772 - sum);
+	return (0);
 }
