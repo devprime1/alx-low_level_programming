@@ -5,7 +5,7 @@
  *
  * Return: A pointer to the encoded string.
  */
-char *rot13(char *s)
+char *rot13(char *str)
 {
 	int i = 0;
 	int j;
@@ -18,18 +18,18 @@ char *rot13(char *s)
 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'A', 'B', 'C', 'D', 'E',
 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'};
 
-	while (s[i] != 0)
+	while (str[i] != 0)
 	{
 		for (j = 0; j < 52; j++)
 		{
-			if (s[i] == st[j])
+			if (str[i] == st[j])
 			{
-				s[i] = sp[j];
+				str[i] = sp[j];
 				break;
 			}
 
 		}
 		i++;
 	}
-	return (s);
+	return (str);
 }
