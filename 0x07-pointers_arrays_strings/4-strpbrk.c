@@ -8,17 +8,20 @@
  * or NULL if no such byte is found.
  */
 
-char *_strpbrk(char *s, char *accept)
-{
-	unsigned int i;
+char *_strpbrk(char *s, char *accept){
+	char *start = accept;
 
-	for (; *s != '\0'; s++)
+	while (*s)
 	{
-		for (i = 0; accept[i] != '\0'; i++)
+		while (*accept)
 		{
-			if (*s == accept[i])
+			if (*accept == *s)
 				return (s);
+			accept++;
 		}
+
+		accept = start;
+		s++;
 	}
 	return (NULL);
 }
