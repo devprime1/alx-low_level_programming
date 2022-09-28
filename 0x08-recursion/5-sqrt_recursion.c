@@ -5,7 +5,7 @@
  * @exp: The number to test for the square root of @base
  * Return: square root
  */
-int sq(int base, exp)
+int sq(int base, int exp)
 {
 	if (exp * exp > base)
 	{
