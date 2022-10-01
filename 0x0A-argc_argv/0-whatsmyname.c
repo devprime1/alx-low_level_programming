@@ -3,8 +3,8 @@
 
 /**
  * main - prints name of a program
- * @argc - number of command line arguments
- * @argv - name of the array
+ * @argc: number of command line arguments
+ * @argv: name of the array
  * Return: 0.
  */
 
